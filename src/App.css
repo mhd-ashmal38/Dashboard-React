@@ -1,38 +1,861 @@
-.App {
-  text-align: center;
+/* navbar */
+#navbar {
+  background: rgb(213, 238, 255);
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbar .nav-img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#navbar .nav-img img {
+  width: 30%;
+}
+
+#navbar .nav-item {
+  background-color: #ffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#navbar .nav-div {
+  padding-right: 3%;
+}
+
+@media screen and (max-width: 700px) {
+  #navbar .nav-img img {
+    width: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (min-width: 768px) {
+  #navbar .nav-item-bell{
+    display: none;
+  }
+}
+
+
+
+/* sidebar */
+
+#sidebar {
+  grid-area: sidebar;
+  width: 100%;
+  height: 125vh;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.sidebar-user {
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-brand img {
+  border-radius: 50%;
+}
+
+.sidebar-user-text h5 a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #000;
+}
+
+.sidebar-user-text p {
+  font-size: 12px;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  font-size: 2.3vh;
+  font-weight: bold;
+  width: 90%;
+}
+
+.sidebar-list-item .icon{
+  padding-left: 6px;
+}
+
+.logout {
+  background-color: rgb(223, 253, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.logout a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar-list-item:hover {
+  background-color: #c3e1ff;
+  cursor: pointer;
+}
+
+
+/* @media screen and (max-width: 1083px) {
+  .sidebar-list-item {
+    font-size: 2vh;
+  }
+} */
+
+@media screen and (max-width: 992px) {
+  .sidebar-brand .sidebar-user-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width:990px) {
+  .sidebar-list-item .icon {
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+}
+
+
+
+/* cardfirst */
+
+.card-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  font-weight: 500;
+}
+
+.card h3 {
+  font-size: 4.5vh;
+}
+
+.card h5 {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-size: 2vh;
+}
+
+.card h4 {
+  font-size: 4.5vh;
+}
+
+.card-main .button a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5vh;
+}
+
+.card-main .button {
+  width: 60%;
+}
+
+.card-main .btn-1:hover {
+  box-shadow: 0 0 25px #FCF55F;
+  transition: 0.3s;
+}
+
+.card-main .btn-2:hover {
+  box-shadow: 0 0 25px #FB9984;
+  transition: 0.3s;
+}
+
+.card-main .btn-3:hover {
+  box-shadow: 0 0 25px #F794FA;
+  transition: 0.3s;
+}
+
+.card p,
+li {
+  font-size: 2.3vh;
+}
+
+.card .last-text {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card .feature {
+  color: black;
+  font-size: 2.3vh;
+}
+
+.card-main .feature:hover {
+  text-decoration: none;
+  transition: 0.3;
+}
+
+@media screen and (max-width: 322px) {
+
+  .card-main .feature {
+    font-size: 2vh;
+  }
+}
+
+
+
+@media screen and (max-width: 1423px) {
+
+  .card p,
+  li {
+    font-size: 2.0vh;
+  }
+}
+
+/* @media screen and (max-width: 1377px) and (min-width: 1216px) {
+
+  .card .button span {
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width: 1215px) and (min-width: 1116px) {
+
+  .card .button span {
+    font-size: 1.7vh;
+  }
+}
+
+@media screen and (max-width: 1115px) and (min-width: 1051px) {
+
+  .card .button span {
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 1031px) {
+  .card .button span {
+    font-size: 1.3vh;
+  }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 1020px) {
+
+  .card .button span {
+    font-size: 1.9vh;
+  }
+}
+
+@media screen and (max-width: 390px) and (min-width: 374px) {
+
+  .card .button span {
+    font-size: 1.9vh;
+  }
+}
+
+@media screen and (max-width: 373px) {
+
+  .card .button span {
+    font-size: 1.5vh;
+  }
+} */
+
+@media screen and (max-width: 1002px) {
+
+  .card-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+  .card-main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* cardsecond */
+
+.card-main-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+
+.card-2 {
+  font-weight: 500;
+}
+
+.card-2 h2 {
+  font-size: 4.5vh;
+}
+
+.card-2 p,
+li {
+  font-size: 2.3vh;
+  color: black;
+}
+
+.card-2 .top-btn {
+  background-color: #AEFF61;
+  width: 8rem;
+  text-align: center;
+  border-radius: 50px/50px;
+  padding: 1px;
+}
+
+.card-2 .last-btn-1,.last-btn-2 {
+  text-decoration: none;
+  color: black;
+  font-size: 2.5vh;
+}
+
+.card-2 .last-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-2 .top-btn2 {
+  background-color: #6195FF;
+  width: 8rem;
+  text-align: center;
+  border-radius: 50px/50px;
+  padding: 1px;
+}
+
+.card-2 .last-btn-2 {
+  background-color: #6195FF;
+  text-decoration: none;
+  color: black;
+}
+
+.card-2 .last-text2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-2 .last-btn-1:hover {
+  box-shadow: 0 0 25px #AEFF61;
+  transition: 0.3s;
+}
+
+.card-2 .last-btn-2:hover {
+  box-shadow: 0 0 25px #6195FF;
+  transition: 0.3s;
+}
+
+@media screen and (min-width:602px) {
+  .card-2 .enterprise-text {
+    margin-top: 50px;
+  }
+}
+
+
+@media screen and (max-width:1300px) {
+  .card-main-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .card-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 2600px) and (min-width: 2500px) {
+
+  .card2 .top-btn a {
+    font-size: 1.8vh;
+
+  }
+}
+
+/* rightsidebar */
+
+.parent {
+  position: relative;
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.top {
+  position: absolute;
+  padding: 5px;
+  top: 1%;
+  color: #4b87fd;
+  background: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bottom {
+  border-radius: 50%;
+  background-color: rgb(213, 238, 255);
+  position: absolute;
+  bottom: 3%;
+}
+
+
+/* app.js */
+
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-sidebar {
+  width: 20%;
+}
+
+.home-main {
+  width: 80%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-home {
+  width: 96%;
+}
+
+.home-right-sidebar {
+  width: 4%;
+  background: rgb(213, 238, 255);
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .home-main {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-right-sidebar {
+    display: none;
   }
 }
+
+/* home */
+
+@media screen and (max-width: 615px) {
+  .home-title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 2550px) {
+  .home-title {
+    font-size: 60px;
+  }
+}
+
+
+/* @media screen and (max-width: 570px) {
+  .home-title{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home-title{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home-title{
+    text-align: center;
+  }
+} */
+
+@media screen and (max-width: 579px) {
+  .t-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+/* togglebtn */
+.switch {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+.switch input {
+  appearance: none;
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  background: #ffffff;
+  outline: none;
+}
+
+.switch input::before,
+.switch input::after {
+  z-index: 2;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  font-weight: 500;
+}
+
+.switch input::before {
+  content: "Annually";
+  left: 23px;
+}
+
+.switch input::after {
+  content: "Monthly";
+  right: 23px;
+}
+
+.switch input:checked {
+  background: #ffffff;
+}
+
+.switch label {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 4px;
+  border-radius: 20px;
+}
+
+.switch input {
+  transition: 0.25s;
+  border: 1px solid #000;
+}
+
+.switch input:checked::after,
+.switch input:checked::before {
+  color: #000000;
+  transition: color 0.5s;
+}
+
+.switch input:checked+label {
+  left: 10px;
+  right: 100px;
+  background: #6195FF;
+  transition: left 0.5s, right 0.4s 0.2s;
+}
+
+.switch input:not(:checked) {
+  background: #ffffff;
+  transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before {
+  color: #000000;
+  transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+  color: #000;
+  transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked)+label {
+  left: 100px;
+  right: 10px;
+  background: #6195FF;
+  transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
+}
+
+/* 4k screen */
+@media screen and (min-width: 2550px) {
+
+  /* navbar */
+  #navbar {
+    height: 200px;
+  }
+
+  #navbar .nav-item {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #navbar .nav-item .nav-pic{
+    width: 40px;
+    height: 40px;
+  }
+
+  #navbar .nav-div {
+    padding-right: 4%;
+  }
+
+
+  /* sidebar */
+  #sidebar {
+    height: 96vh;
+  }
+
+  .sidebar-user-text h5 a {
+    font-size: 50px;
+  }
+
+  .sidebar-user-text p {
+    font-size: 32px;
+  }
+
+  .sidebar-list-item {
+    font-size: 2vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .sidebar-list-item .icon{
+    padding-left: 2px;
+  }
+
+  .logout {
+    width: 100%;
+  }
+
+  .logout a {
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  /* rightsidebar */
+  .parent {
+    height: 96vh;
+  }
+
+  /* togglebtn */
+  .switch {
+    width: 400px;
+    height: 80px;
+    border-radius: 25px;
+  }
+
+  .switch input {
+    width: 400px;
+    height: 90px;
+    border-radius: 50px;
+  }
+
+  .switch input::before {
+    font-size: 30px;
+    left: 46px;
+  }
+
+  .switch input::after {
+    font-size: 30px;
+    right: 46px;
+  }
+
+  .switch label {
+    top: 10px;
+    bottom: 2px;
+    border-radius: 50px;
+  }
+
+  .switch input:checked+label {
+    left: 20px;
+    right: 210px;
+  }
+
+  .switch input:not(:checked)+label {
+    left: 210px;
+    right: 20px;
+  }
+
+  /* home */
+  .t-btn {
+    padding-bottom: 30px;
+  }
+
+
+  /* cardfirst */
+
+  .card h3 {
+    font-size: 4.2vh;
+  }
+
+  .card h4 {
+    font-size: 4.2vh;
+  }
+
+  .card-main .button a {
+    font-size: 2.2vh;
+  }
+
+  .card-main .button {
+    width: 50%;
+  }
+
+  .card p,
+  li {
+    font-size: 2.2vh;
+  }
+
+  .card .last-text {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .card .feature {
+    font-size: 2.1vh;
+  }
+
+  .card-main .feature:hover {
+    text-decoration: none;
+    transition: 0.3;
+  }
+
+
+  /* cardsecond */
+
+  .card-2 {
+    gap: 20px;
+  }
+
+  .card-2 h2 {
+    font-size: 4.2vh;
+  }
+
+  .card-2 p,
+  li {
+    font-size: 2.2vh;
+  }
+
+  .card-2 .top-btn {
+    width: 50%;
+  }
+
+  .card-2 .last-btn {
+    font-size: 2.2vh;
+  }
+
+
+  .card-2 .top-btn2 {
+    width: 50%;
+  }
+
+}
+
+
+/* laptop */
+
+@media screen and (min-width: 1023px) and (max-width: 1439px) {
+
+    /* sidebar */
+  #sidebar {
+    height: 125vh;
+  }
+  .sidebar-list-item {
+    font-size: 2.3vh;
+  }
+
+  /* rightsidebar */
+  .parent {
+    height: 100%;
+  }
+}
+
+
+/* mobile L */
+@media screen and (max-width: 450px) {
+
+  .sidebar-list-item{
+    border: none;
+    margin-left: -5px;
+  }
+
+  .sidebar-list-item {
+    width: 100%;
+  }
+}
+
+/* Mobile M */
+@media screen and (max-width: 360px) {
+
+  .card-main .button {
+    width: 100%;
+  }
+}
+
+.card h3 {
+  font-size: 4vh;
+}
+
+.card h4 {
+  font-size: 4vh;
+}
+
+.card-2 h2 {
+  font-size: 4.0vh;
+}
+
+
+
+/* @media screen and (max-width: 1292px) {
+  .sidebar-list-item{
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1215px) {
+  .sidebar-list-item{
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar-list-item{
+    font-size: 10px;
+  }
+} */
+
+
+
+
+
+/* @media screen and (max-width: 2570px) and (min-width: 2000px) {
+  
+  .card-2 .top-btn{
+    width: 50rem;
+  }
+} */
